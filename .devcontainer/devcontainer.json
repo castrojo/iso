@@ -1,0 +1,4 @@
+{
+  "image": "ghcr.io/bootc-dev/devenv-debian",
+  "postCreateCommand": "curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin && pip install pre-commit --quiet"
+}
