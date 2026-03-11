@@ -161,12 +161,12 @@
 
 **Logging:** GitHub Actions automatic job/step logging with collapsible groups (`::group::`/`::endgroup::`)
 
-**Validation:** 
+**Validation:**
 - Pre-commit hooks for YAML/JSON/TOML syntax (`.pre-commit-config.yaml`)
 - Just syntax checking (`just check` recipe)
 - Flatpak ID validation against Flathub (deprecated - now fetched from common repo)
 
-**Authentication:** 
+**Authentication:**
 - GitHub token automatically provided for container registry access
 - CloudFlare R2 credentials passed as repository secrets
 - Secrets inherited from caller to reusable workflow via `secrets: inherit`

@@ -92,7 +92,7 @@
 - Multi-line comment blocks for major sections:
   ```bash
   # Configure Live Environment
-  
+
   # Setup dock
   ```
 
@@ -151,7 +151,7 @@ fi
           type: boolean
     schedule:
       - cron: '0 2 1 * *'
-  
+
   jobs:
     build-iso-stable:
       uses: ./.github/workflows/reusable-build-iso-anaconda.yml
@@ -188,10 +188,10 @@ fi
 recipe-name param1="default" param2="default":
     #!/usr/bin/bash
     set -eoux pipefail
-    
+
     # Validate inputs
     {{ just }} validate "${param1}" "${param2}"
-    
+
     # Main logic
     # ...
 ```

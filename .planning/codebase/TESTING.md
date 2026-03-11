@@ -176,7 +176,7 @@ validate $image $tag $flavor:
     declare -A images={{ images }}
     declare -A tags={{ tags }}
     declare -A flavors={{ flavors }}
-    
+
     # Validity Checks
     if [[ -z "$checkimage" ]]; then
         echo "Invalid Image..."
