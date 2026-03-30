@@ -149,7 +149,8 @@ jobs:
           # Standard variants use the Just recipe to determine image name
           image_name=$(just image_name "bluefin" "${{ matrix.image_version}}" "${{ matrix.flavor}}")
           image_ref="${IMAGE_REGISTRY}/${image_name}"
-          artifact_format="$image_name-${{ matrix.image_version }}-$(uname -m)"
+          effective_tag="${{ inputs.image_tag || matrix.image_version }}"
+          artifact_format="$image_name-${effective_tag}-$(uname -m)"
           KARGS="NONE"
           echo "image_ref=$image_ref" >> "${GITHUB_OUTPUT}"
           echo "artifact_format=$artifact_format" >> "${GITHUB_OUTPUT}"
